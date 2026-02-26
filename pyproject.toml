@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "godec"
+version = "1.0.0"
+description = "Low-Rank Sparse Noise Decomposition via the Greedy Semi-Soft GoDec algorithm (GreBsmo)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "J. Fattaccioli", email = "" },
+]
+keywords = ["image processing", "low-rank", "sparse", "decomposition", "background subtraction", "microscopy"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Intended Audience :: Science/Research",
+]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "scikit-image>=0.21",
+    "tifffile>=2023.1",
+    "PyWavelets>=1.4",
+    "opencv-python>=4.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "mypy",
+    "isort",
+    "ruff",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["godec*"]
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+line-length = 100
