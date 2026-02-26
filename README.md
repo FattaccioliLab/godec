@@ -20,8 +20,8 @@ The function accepts **8-bit or 16-bit TIFF stacks** and **grayscale or RGB `.av
 Requires Python ≥ 3.10.
 
 ```bash
-git clone https://github.com/FattaccioliLab/Codes
-cd Codes/LowRankSparseNoiseDecomposition-GoDec
+git clone https://github.com/FattaccioliLab/godec
+cd godec
 pip install .
 ```
 
